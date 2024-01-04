@@ -1,0 +1,27 @@
+.headerBg {
+  background-color: var(--surface-background);
+}
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.headerContainer span {
+  color: var(--text-primary);
+  font-family: 'Kalam', cursive;
+  font-size: 1.3rem;
+}
+.ulMenu {
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ulMenu li a {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: 'Heebo', sans-serif;
+}
