@@ -1,0 +1,7 @@
+.subtitle {
+  color: var( --secondary-color);
+  font-family: 'Kalam', cursive;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}

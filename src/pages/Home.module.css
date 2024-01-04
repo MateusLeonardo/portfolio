@@ -1,0 +1,180 @@
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh -53px);
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+  padding-top: 5rem;
+}
+.headline .leftContent,
+.headline .rightContent {
+  flex: 1;
+}
+.headline .leftContent h1 {
+  font-size: 2.7rem;
+  font-family: 'Kalam', cursive;
+  background: var(--brand-gradient-horizontal, linear-gradient(90deg, #9955E8 0%, #7BFFAF 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 1.8rem;
+}
+.headline .leftContent h2 {
+  color: var(--text-primary);
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+.headline .leftContent p {
+  padding-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.headline .leftContent .socials a {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 5px;
+  color: var(--primary-color-400);
+  font-size: 2.1rem;
+  transition: all 0.3s ease;
+}
+.headline .leftContent .socials a:hover {
+  filter: brightness(80%);
+}
+
+.headline .rightContent img {
+  border-radius: 54% 30% 67% 40%;
+}
+
+@media (max-width: 768px) {
+  .headline {
+    padding-top: 5rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .leftContent {
+    flex: initial;
+  }
+}
+
+
+
+.about {
+  display: flex;
+  margin: 0 3rem;
+  padding: 4rem;
+  background-color: var(--surface-primary);
+  border-radius: 10px;
+}
+.about .leftContent,
+.about .rightContent {
+  flex: 1;
+}
+.about .rightContent {
+  padding: 4rem;
+}
+.about .rightContent .tecnologies svg {
+  margin-right: 20px;
+  color: var(--primary-color-400);
+  margin-bottom: 2rem;
+}
+.about .rightContent h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  padding-bottom: 1rem;
+  color: var(--text-primary);
+}
+.about .rightContent p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 2rem;
+}
+.about .rightContent button {
+  background-color: var(--primary-color-400);
+  border: none;
+  border-radius: 8px;
+  padding: 1.2rem 2.2rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+.about .rightContent button:hover {
+  filter: brightness(80%);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 10px;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 0.5rem;
+  }
+  .about .rightContent {
+    padding: 0;
+  }
+}
+
+
+.titleProjects {
+  text-align: center;
+  margin-top: 5rem;
+}
+.titleProjects p {
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.projetcs {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.projetcs .card {
+  max-width: 360px;
+  padding: 20px;
+  background-color: var(--surface-primary);
+  border-radius: 10px;
+}
+.projetcs .card img {
+  border-radius: 10px 10px 0 0 ;
+}
+.timeProject {
+  padding-top: 5px;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.timeProject p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.timeProject svg {
+  color: var(--primary-color-400);
+}
+.card h1 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  padding-bottom: 0.5rem;
+}
+.card > p {
+  font-size: 1rem;
+  color: var(--text-primary);
+}

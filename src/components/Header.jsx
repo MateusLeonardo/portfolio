@@ -1,13 +1,25 @@
 import { FiSun } from "react-icons/fi";
-import styles from "./Header.module.css"
+import { IoMenu, IoClose } from "react-icons/io5";
+import styles from "./Header.module.css";
+import { useState } from "react";
 
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <header className={styles.headerBg}>
+    <header className={styles.header}>
       <div className={styles.headerContainer}>
         <span>Mateus</span>
 
-        <nav className={styles.navMenu}>
+        {menuOpen ? (
+          <IoClose size={30} color="#F5F6F6" onClick={handleToggleMenu} />
+        ) : (
+          <IoMenu size={30} color="#F5F6F6" onClick={handleToggleMenu} />
+        )}
+        <nav className={`${styles.navMenu} ${menuOpen && styles.active}`}>
           <ul className={styles.ulMenu}>
             <li>
               <a href="#">Home</a>
@@ -22,10 +34,10 @@ export function Header() {
               <a href="contato">Contato</a>
             </li>
             <li>
-              <button>PT</button>
+              <button className={styles.buttonTranslater}>En</button>
             </li>
             <li>
-              <FiSun />
+              <FiSun size={20} />
             </li>
           </ul>
         </nav>

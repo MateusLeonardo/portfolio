@@ -1,6 +1,6 @@
 :root {
-  --primary-color-500: #8A42DB;
-  --primary-color-400: #8A42DB;
+  --primary-color-500: #3F1273;
+  --primary-color-400: #9955E8;
   --secondary-color: #7DFFAF;
 
   --surface-background: #171023;
@@ -19,6 +19,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--surface-background);
+  font-family: 'Heebo', sans-serif
 }
 
 a {
@@ -28,4 +30,11 @@ a {
 
 ul {
   list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, p {
+  margin: 0 ;
+  padding: 0;
 }
