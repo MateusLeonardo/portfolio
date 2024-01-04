@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 10px auto;
+  padding: 2rem 20px;
+}
+.footer p {
+  color: var(--text-secondary);
+}
+.footer svg {
+  font-size: 2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  background-color: var(--surface-tertiary);
+  padding: 10px;
+  border-radius: 0.5rem;
+}

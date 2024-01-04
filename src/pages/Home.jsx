@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Subtitle } from "../components/Subtitle";
 import styles from "./Home.module.css";
@@ -35,9 +36,9 @@ export function Home() {
               </a>
             </div>
           </div>
-          <figure className={styles.rightContent}>
+          <div className={styles.rightContent}>
             <img src="../../public/FotoMateus.jpg" alt="" />
-          </figure>
+          </div>
         </section>
 
         <section className={styles.about}>
@@ -148,7 +149,25 @@ export function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.contact}>
+          <div className={styles.leftContent}>
+          <img src="../../public/Mobile-rafiki.svg" alt="" width={200}/>
+            <Subtitle text="Contato" />
+            <h2>Gostou do meu trabalho? Vamos trabalhar juntos.</h2>
+            <p>Me envie um <a href="mailto:mateus_leonardo1997@hotmail.com">email</a>.</p>
+          </div>
+          <div className={styles.rightContent}>
+            <form className={styles.formContact}>
+              <input type="text" placeholder="Nome"/>
+              <input type="email" placeholder="E-mail"/>
+              <textarea rows={10} placeholder="Digite sua mensagem"/>
+              <button type="submit">Enviar mensagem <FaLongArrowAltRight/></button>
+            </form>
+          </div>
+        </section>
       </main>
+      <Footer />
     </>
   );
 }
