@@ -2,6 +2,7 @@ import { FiSun } from "react-icons/fi";
 import { IoMenu, IoClose } from "react-icons/io5";
 import styles from "./Header.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <span>Mateus</span>
+        <Link to={'/'}>Mateus</Link>
 
         {menuOpen ? (
           <IoClose size={30} color="#F5F6F6" onClick={handleToggleMenu} />
@@ -22,7 +23,7 @@ export function Header() {
         <nav className={`${styles.navMenu} ${menuOpen && styles.active}`}>
           <ul className={styles.ulMenu}>
             <li>
-              <a href="#">Home</a>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>
               <a href="sobre">Sobre</a>

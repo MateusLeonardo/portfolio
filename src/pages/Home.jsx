@@ -1,5 +1,3 @@
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
 import { Subtitle } from "../components/Subtitle";
 import styles from "./Home.module.css";
 import projetos from "../../projetos";
@@ -17,11 +15,12 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { GoArrowUpRight } from "react-icons/go";
 
 export function Home() {
   return (
     <>
-      <Header />
       <main>
         <section className={styles.headline}>
           <div className={styles.leftContent}>
@@ -86,7 +85,7 @@ export function Home() {
           </div>
           <div className={styles.projetcs}>
             {projetos.map((projeto) => (
-              <div className={styles.card} key={projeto.id}>
+              <div className={styles.card} key={projeto.id} >
                 <img src={projeto.imagem} alt="" />
                 <div className={styles.timeProject}>
                   <p>{projeto.status}</p>
@@ -96,6 +95,7 @@ export function Home() {
                 </div>
                 <h1>{projeto.nome}</h1>
                 <p>{projeto.descricao}</p>
+                <Link to={`/projetoDetalhes/${projeto.id}`}>Detalhes <GoArrowUpRight/></Link>
               </div>
             ))}
           </div>
@@ -125,7 +125,6 @@ export function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

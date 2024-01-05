@@ -1,0 +1,94 @@
+.container {
+  margin: 20px;
+}
+.containerProjectDescription {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+.projectDescription {
+  border-radius: 1rem;
+}
+.projectDescription,
+.projectLinks {
+  background-color: var(--surface-primary);
+  height: max-content;
+}
+.projectDescription img {
+  border-radius: 1rem 1rem 0 0 ;
+}
+.projectDescription .content {
+  padding: 2rem 3rem 3rem 3rem;
+}
+.timeProject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+.timeProject p {
+  color: var(--text-secondary);
+}
+.tecnologies svg {
+  color: var(--primary-color-400);
+  margin-right: 10px;
+}
+.content h1 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+.content p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+
+.projectLinks {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.projectLinks h2 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-bottom: 1.5rem;
+}
+.projectLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+.projectLinks a:hover {
+  filter: brightness(75%);
+}
+.projectLinks a svg {
+  font-size: 1.4rem;
+}
+.linkLiveDemo {
+  background-color: var(--primary-color-400);
+  margin-bottom: 1rem;
+}
+.linkCodeGithub {
+  background-color: var(--surface-secondary);
+}
+
+@media(max-width: 1024px) {
+  .containerProjectDescription {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .projectDescription .content {
+    padding: 2rem;
+  }
+}

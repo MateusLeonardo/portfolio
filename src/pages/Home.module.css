@@ -58,13 +58,29 @@
     gap: 0rem;
   }
   .headline .leftContent {
-    flex: initial;
+    order: 2;
+  }
+  .headline .leftContent,
+  .headline .rightContent {
+    flex: 0;
   }
   .headline .leftContent h1 {
     padding-bottom: 0;
   }
   .headline .rightContent img {
     width: 400px;
+  }
+  .headline .rightContent {
+    order: 1;
+  }
+}
+
+@media(max-width: 425px) {
+  .headline .leftContent h1 {
+    font-size: 2.4rem;
+  }
+  .headline .leftContent h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -113,6 +129,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   color: var(--text-primary);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 }
 .about .rightContent button:hover {
   filter: brightness(80%);
@@ -186,6 +203,27 @@
   font-size: 1rem;
   color: var(--text-primary);
 }
+
+.card a {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  color: var(--text-primary);
+  background-color: var(--surface-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+.card a svg {
+  font-size: 1.2rem;
+}
+.card a:hover {
+  filter: brightness(80%);
+}
+
 .contactContainer {
   max-width: 1400px;
   margin: 0 auto;
@@ -218,7 +256,7 @@
   padding: 0 3rem;
 }
 .formContact input,
-.formContact textarea  {
+.formContact textarea {
   padding: 0.75rem 1rem;
   color: var(--text-secondary);
   background-color: var(--surface-background);
@@ -229,13 +267,13 @@
   transition: all 0.3s ease;
 }
 .formContact input::placeholder,
-.formContact textarea::placeholder  {
+.formContact textarea::placeholder {
   color: var(--text-secondary);
 }
 .formContact input:focus,
 .formContact input:hover,
 .formContact textarea:focus,
-.formContact textarea:hover{
+.formContact textarea:hover {
   border: 2px solid var(--secondary-color);
 }
 
@@ -253,9 +291,14 @@
   color: var(--text-primary);
   font-weight: 500;
   font-size: 1rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+.formContact button:hover {
+  filter: brightness(75%);
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .contact {
     flex-direction: column;
     padding: 20px;

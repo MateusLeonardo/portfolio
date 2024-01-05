@@ -10,7 +10,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-.headerContainer span {
+.headerContainer > a {
   color: var(--text-primary);
   font-family: 'Kalam', cursive;
   font-size: 1.3rem;

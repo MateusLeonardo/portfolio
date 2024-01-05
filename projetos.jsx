@@ -4,7 +4,7 @@ import fotoProjeto from './src/assets/ProjetoImagem.png'
 
 const projetos = [
   {
-    id: 1,
+    id: 'ReceitasWeb',
     imagem: fotoProjeto,
     status: 'Em desenvolvimento',
     technologies: [
@@ -16,8 +16,8 @@ const projetos = [
     descricao: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quibusdam autem quisquam assumenda quas?'
   },
   {
-    id: 2,
-    imagem: './src/assets/ProjetoImagem.png',
+    id: 'CoffeHouse',
+    imagem: fotoProjeto,
     status: 'Em desenvolvimento',
     technologies: [
       <IoLogoJavascript key="js" size={25} />,
@@ -27,8 +27,8 @@ const projetos = [
     descricao: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quibusdam autem quisquam assumenda quas?'
   },
   {
-    id: 3,
-    imagem: './src/assets/ProjetoImagem.png',
+    id: 'ToDoList',
+    imagem: fotoProjeto,
     status: 'Em desenvolvimento',
     technologies: [
       <IoLogoJavascript key="js" size={25} />,
