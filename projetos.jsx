@@ -4,7 +4,7 @@ import { IoLogoJavascript } from "react-icons/io";
 const projetos = [
   {
     id: 1,
-    imagem: './public/Project image.png',
+    imagem: './public/ProjetoImagem.png',
     status: 'Em desenvolvimento',
     technologies: [
       <IoLogoJavascript key="js" size={25} />,
@@ -16,7 +16,7 @@ const projetos = [
   },
   {
     id: 2,
-    imagem: './public/Project image.png',
+    imagem: './public/ProjetoImagem.png',
     status: 'Em desenvolvimento',
     technologies: [
       <IoLogoJavascript key="js" size={25} />,
@@ -27,7 +27,7 @@ const projetos = [
   },
   {
     id: 3,
-    imagem: './public/Project image.png',
+    imagem: './public/ProjetoImagem.png',
     status: 'Em desenvolvimento',
     technologies: [
       <IoLogoJavascript key="js" size={25} />,
