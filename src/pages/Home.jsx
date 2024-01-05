@@ -3,6 +3,9 @@ import { Header } from "../components/Header";
 import { Subtitle } from "../components/Subtitle";
 import styles from "./Home.module.css";
 import projetos from "../../projetos";
+import fotoMateus from '../assets/FotoMateus.jpg'
+import fotoSobre from '../assets/bro.png'
+import fotoContato from '../assets/MobileRafiki.svg'
 
 import {
   FaLongArrowAltRight,
@@ -39,14 +42,14 @@ export function Home() {
             </div>
           </div>
           <div className={styles.rightContent}>
-            <img src="../assets/FotoMateus.jpg" alt="" />
+            <img src={fotoMateus} alt="" />
           </div>
         </section>
 
         <section className={styles.about}>
           <div className={styles.leftContent}>
             <figure>
-              <img src="../assets/bro.png" alt="" />
+              <img src={fotoSobre} alt="" />
             </figure>
           </div>
           <div className={styles.rightContent}>
@@ -101,7 +104,7 @@ export function Home() {
         <section className={styles.contactContainer}>
           <div className={styles.contact}>
             <div className={styles.leftContent}>
-              <img src="../assets/MobileRafiki.svg" alt="" width={200} />
+              <img src={fotoContato} alt="" width={200} />
               <Subtitle text="Contato" />
               <h2>Gostou do meu trabalho? Vamos trabalhar juntos.</h2>
               <p>
