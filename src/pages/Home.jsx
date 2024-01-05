@@ -39,14 +39,14 @@ export function Home() {
             </div>
           </div>
           <div className={styles.rightContent}>
-            <img src="../../public/FotoMateus.jpg" alt="" />
+            <img src="../assets/FotoMateus.jpg" alt="" />
           </div>
         </section>
 
         <section className={styles.about}>
           <div className={styles.leftContent}>
             <figure>
-              <img src="../../public/bro.png" alt="" />
+              <img src="../assets/bro.png" alt="" />
             </figure>
           </div>
           <div className={styles.rightContent}>
@@ -101,7 +101,7 @@ export function Home() {
         <section className={styles.contactContainer}>
           <div className={styles.contact}>
             <div className={styles.leftContent}>
-              <img src="../../public/Mobile-rafiki.svg" alt="" width={200} />
+              <img src="../assets/MobileRafiki.svg" alt="" width={200} />
               <Subtitle text="Contato" />
               <h2>Gostou do meu trabalho? Vamos trabalhar juntos.</h2>
               <p>
