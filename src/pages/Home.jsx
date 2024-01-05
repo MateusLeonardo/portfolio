@@ -2,6 +2,8 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Subtitle } from "../components/Subtitle";
 import styles from "./Home.module.css";
+import projetos from "../../projetos";
+
 import {
   FaLongArrowAltRight,
   FaReact,
@@ -80,90 +82,43 @@ export function Home() {
             <p>Aqui estão meus principais projetos</p>
           </div>
           <div className={styles.projetcs}>
-            <div className={styles.card}>
-              <img src="../../public/Project image.png" alt="" />
-              <div className={styles.timeProject}>
-                <p>Em desenvolvimento</p>
-                <div className={styles.tecnologies}>
-                  <IoLogoJavascript size={25} />
-                  <FaHtml5 size={25} />
-                  <FaCss3 size={25} />
+            {projetos.map((projeto) => (
+              <div className={styles.card} key={projeto.id}>
+                <img src={projeto.imagem} alt="" />
+                <div className={styles.timeProject}>
+                  <p>{projeto.status}</p>
+                  <div className={styles.tecnologies}>
+                    {projeto.technologies.map((technologies) => technologies)}
+                  </div>
                 </div>
+                <h1>{projeto.nome}</h1>
+                <p>{projeto.descricao}</p>
               </div>
-              <h1>Projeto Nome</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                tempora quibusdam autem quisquam assumenda quas?
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <img src="../../public/Project image.png" alt="" />
-              <div className={styles.timeProject}>
-                <p>Em desenvolvimento</p>
-                <div className={styles.tecnologies}>
-                  <IoLogoJavascript size={25} />
-                  <FaHtml5 size={25} />
-                  <FaCss3 size={25} />
-                </div>
-              </div>
-              <h1>Projeto Nome</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                tempora quibusdam autem quisquam assumenda quas?
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <img src="../../public/Project image.png" alt="" />
-              <div className={styles.timeProject}>
-                <p>Em desenvolvimento</p>
-                <div className={styles.tecnologies}>
-                  <IoLogoJavascript size={25} />
-                  <FaHtml5 size={25} />
-                  <FaCss3 size={25} />
-                </div>
-              </div>
-              <h1>Projeto Nome</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                tempora quibusdam autem quisquam assumenda quas?
-              </p>
-            </div>
-            
-            <div className={styles.card}>
-              <img src="../../public/Project image.png" alt="" />
-              <div className={styles.timeProject}>
-                <p>Em desenvolvimento</p>
-                <div className={styles.tecnologies}>
-                  <IoLogoJavascript size={25} />
-                  <FaHtml5 size={25} />
-                  <FaCss3 size={25} />
-                </div>
-              </div>
-              <h1>Projeto Nome</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                tempora quibusdam autem quisquam assumenda quas?
-              </p>
-            </div>
+            ))}
           </div>
         </section>
 
-        <section className={styles.contact}>
-          <div className={styles.leftContent}>
-          <img src="../../public/Mobile-rafiki.svg" alt="" width={200}/>
-            <Subtitle text="Contato" />
-            <h2>Gostou do meu trabalho? Vamos trabalhar juntos.</h2>
-            <p>Me envie um <a href="mailto:mateus_leonardo1997@hotmail.com">email</a>.</p>
-          </div>
-          <div className={styles.rightContent}>
-            <form className={styles.formContact}>
-              <input type="text" placeholder="Nome"/>
-              <input type="email" placeholder="E-mail"/>
-              <textarea rows={10} placeholder="Digite sua mensagem"/>
-              <button type="submit">Enviar mensagem <FaLongArrowAltRight/></button>
-            </form>
+        <section className={styles.contactContainer}>
+          <div className={styles.contact}>
+            <div className={styles.leftContent}>
+              <img src="../../public/Mobile-rafiki.svg" alt="" width={200} />
+              <Subtitle text="Contato" />
+              <h2>Gostou do meu trabalho? Vamos trabalhar juntos.</h2>
+              <p>
+                Me envie um{" "}
+                <a href="mailto:mateus_leonardo1997@hotmail.com">email</a>.
+              </p>
+            </div>
+            <div className={styles.rightContent}>
+              <form className={styles.formContact}>
+                <input type="text" placeholder="Nome" />
+                <input type="email" placeholder="E-mail" />
+                <textarea rows={10} placeholder="Digite sua mensagem" />
+                <button type="submit">
+                  Enviar mensagem <FaLongArrowAltRight />
+                </button>
+              </form>
+            </div>
           </div>
         </section>
       </main>
