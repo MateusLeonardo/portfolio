@@ -1,10 +1,11 @@
 import { FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
+import fotoProjeto from './src/assets/ProjetoImagem.png'
 
 const projetos = [
   {
     id: 1,
-    imagem: '../assets/ProjetoImagem.png',
+    imagem: fotoProjeto,
     status: 'Em desenvolvimento',
     technologies: [
       <IoLogoJavascript key="js" size={25} />,
