@@ -152,7 +152,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                         key={index}
                         title={technology.key}
                         placement="bottom"
-                        color="#413A4F"
+                        color="#0C5A6E"
                       >
                         <span>{technology}</span>
                       </Tooltip>
