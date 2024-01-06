@@ -17,7 +17,7 @@
   font-family: "Kalam", cursive;
   background: var(
     --brand-gradient-horizontal,
-    linear-gradient(90deg, #9955e8 0%, #7bffaf 100%)
+    linear-gradient(90deg, #00ADB5 0%, #7bffaf 100%)
   );
   background-clip: text;
   -webkit-background-clip: text;

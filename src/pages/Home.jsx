@@ -82,12 +82,12 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 href="https://www.linkedin.com/in/mateus-leonardo-dev/"
                 target="_blank"
               >
-                <Tooltip title="LinkedIn" placement="bottom">
+                <Tooltip title="LinkedIn" placement="bottom" color="#413A4F">
                   <FaLinkedin />
                 </Tooltip>
               </a>
               <a href="https://github.com/MateusLeonardo" target="_blank">
-                <Tooltip title="GitHub" placement="bottom">
+                <Tooltip title="GitHub" placement="bottom" color="#413A4F">
                   <FaGithub />
                 </Tooltip>
               </a>
