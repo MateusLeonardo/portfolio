@@ -161,7 +161,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 </div>
                 <h1>{projeto.nome}</h1>
                 <p>{projeto.descricaoPequena}</p>
-                <Link to={`/${projeto.id}`}>
+                <Link to={`/projeto/${projeto.id}`}>
                   Detalhes <GoArrowUpRight />
                 </Link>
               </div>

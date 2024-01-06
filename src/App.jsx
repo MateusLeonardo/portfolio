@@ -5,6 +5,7 @@ import ProjectDetails from "./pages/ProjectDetails";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { useRef } from "react";
+import { NotFound } from "./components/NotFound";
 
 const App = () => {
   const sobreRef = useRef(null);
@@ -34,7 +35,8 @@ const App = () => {
             />
           }
         />
-        <Route path="/:id" element={<ProjectDetails />} />
+        <Route path="/projeto/:id" element={<ProjectDetails />} />
+        <Route path="*" element={<NotFound/> } />
       </Routes>
       <Footer />
     </BrowserRouter>
