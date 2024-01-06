@@ -4,7 +4,6 @@ import projetos from "../../projetos";
 import fotoMateus from '../assets/FotoMateus.jpg'
 import fotoSobre from '../assets/bro.png'
 import fotoContato from '../assets/MobileRafiki.svg'
-
 import {
   FaLongArrowAltRight,
   FaReact,
@@ -13,12 +12,55 @@ import {
   FaFigma,
   FaLinkedin,
   FaGithub,
+  FaCheck
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
+import { useState } from "react";
+import emailjs from '@emailjs/browser'
 
-export function Home() {
+export function Home({sobreRef, projetosRef, contatoRef}) {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [sendingMessage, setSendingMessage] = useState(false)
+  const [sentMessage, setSentMessage] = useState(false)
+
+  const sendEmail = async (event) => {
+    event.preventDefault()
+
+    if(name === '' || email === '' || message === '') {
+      alert('Preencha todos os campos')
+      return
+    }
+
+    try  {
+      setSendingMessage(true)
+      const templateParams = {
+        from_name: name,
+        message: message,
+        email: email
+      }
+     const response = await emailjs.send("service_s0usnqp", "template_odki7as", templateParams, "MHvpjapl3Mpmr-zzN")
+
+      setEmail('')
+      setMessage('')
+      setName('')
+
+      setSendingMessage(false)
+      setSentMessage(true)
+      
+      setTimeout(() => {
+        setSentMessage(false)
+      }, 2000)
+    } catch (err) { 
+      console.log('Erro:', err)
+    } 
+
+  }
+
+
   return (
     <>
       <main>
@@ -32,10 +74,10 @@ export function Home() {
             </p>
             <div className={styles.socials}>
               <Subtitle text="Minhas redes sociais" />
-              <a href="">
+              <a href="https://www.linkedin.com/in/mateus-leonardo-dev/" target="_blank">
                 <FaLinkedin />
               </a>
-              <a href="">
+              <a href="https://github.com/MateusLeonardo" target="_blank">
                 <FaGithub />
               </a>
             </div>
@@ -45,7 +87,7 @@ export function Home() {
           </div>
         </section>
 
-        <section className={styles.about}>
+        <section className={styles.about} id="sobre" ref={sobreRef}>
           <div className={styles.leftContent}>
             <figure>
               <img src={fotoSobre} alt="" />
@@ -78,7 +120,7 @@ export function Home() {
           </div>
         </section>
 
-        <section className={styles.projectsContainer}>
+        <section className={styles.projectsContainer} id="projetos" ref={projetosRef}>
           <div className={styles.titleProjects}>
             <Subtitle text="Projetos" />
             <p>Aqui estão meus principais projetos</p>
@@ -94,14 +136,14 @@ export function Home() {
                   </div>
                 </div>
                 <h1>{projeto.nome}</h1>
-                <p>{projeto.descricao}</p>
-                <Link to={`/projetoDetalhes/${projeto.id}`}>Detalhes <GoArrowUpRight/></Link>
+                <p>{projeto.descricaoPequena}</p>
+                <Link to={`/${projeto.id}`}>Detalhes <GoArrowUpRight/></Link>
               </div>
             ))}
           </div>
         </section>
 
-        <section className={styles.contactContainer}>
+        <section className={styles.contactContainer} id="contato" ref={contatoRef}>
           <div className={styles.contact}>
             <div className={styles.leftContent}>
               <img src={fotoContato} alt="" width={200} />
@@ -114,12 +156,24 @@ export function Home() {
             </div>
             <div className={styles.rightContent}>
               <form className={styles.formContact}>
-                <input type="text" placeholder="Nome" />
-                <input type="email" placeholder="E-mail" />
-                <textarea rows={10} placeholder="Digite sua mensagem" />
-                <button type="submit">
-                  Enviar mensagem <FaLongArrowAltRight />
+                <input type="text" placeholder="Nome" value={name} onChange={({target}) => setName(target.value)}/>
+                <input type="email" placeholder="E-mail" value={email} onChange={({target}) => setEmail(target.value)}/>
+                <textarea rows={10} placeholder="Digite sua mensagem" value={message} onChange={({target}) => setMessage(target.value)}/>
+                {sentMessage ? (
+                  <button type="submit" disabled onClick={sendEmail}>
+                  Mensagem enviada! <FaCheck color="green"/>
                 </button>
+                ) : (
+                  sendingMessage ? (
+                    <button type="submit" disabled onClick={sendEmail}>
+                      Enviando mensagem <span className="loading"></span>
+                    </button>
+                  ) : (
+                    <button type="submit" onClick={sendEmail}>
+                      Enviar mensagem <FaLongArrowAltRight />
+                    </button>
+                  )
+                )}
               </form>
             </div>
           </div>

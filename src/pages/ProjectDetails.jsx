@@ -37,11 +37,11 @@ const ProjectDetails = () => {
         </div>
         <div className={styles.projectLinks}>
           <h2>Dê uma olhada neste projeto</h2>
-          <a href="#" className={styles.linkLiveDemo}>
+          <a href={projeto.liveDemo} target="_blank" className={styles.linkLiveDemo}>
             <TbWorld /> <span>Live demo</span>
             <GoArrowUpRight />
           </a>
-          <a href="#" className={styles.linkCodeGithub}>
+          <a href={projeto.githubCode} target="_blank" className={styles.linkCodeGithub}>
             <FaGithub /> <span>Código</span>
             <GoArrowUpRight />
           </a>

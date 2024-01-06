@@ -4,14 +4,37 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProjectDetails from "./pages/ProjectDetails";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { useRef } from "react";
 
 const App = () => {
+  const sobreRef = useRef(null);
+  const projetosRef = useRef(null);
+  const contatoRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header
+       scrollToSection={scrollToSection}
+       sobreRef={sobreRef}
+       projetosRef={projetosRef}
+       contatoRef={contatoRef}
+      />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projetoDetalhes/:id" element={<ProjectDetails />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              sobreRef={sobreRef}
+              projetosRef={projetosRef}
+              contatoRef={contatoRef}
+            />
+          }
+        />
+        <Route path="/:id" element={<ProjectDetails />} />
       </Routes>
       <Footer />
     </BrowserRouter>
