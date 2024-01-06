@@ -10,9 +10,9 @@ const projetos = [
     imagem: fotoReceitasWeb,
     status: 'Em desenvolvimento',
     technologies: [
-      <FaHtml5 key="html" size={25} />,
-      <FaCss3 key="css" size={25} />,
-      <IoLogoJavascript key="js" size={25} />
+      <FaHtml5 key="HTML" size={25} />,
+      <FaCss3 key="CSS" size={25} />,
+      <IoLogoJavascript key="javaScript" size={25} />
     ],
     nome: 'Receitas Web',
     descricao: 'O projeto Receitas Web é uma página online que oferece uma variedade de receitas simples e fáceis de fazer. A página tem como objetivo proporcionar aos usuários uma experiência prática e acessível para encontrar e seguir passo a passo diversas receitas.',
@@ -25,9 +25,9 @@ const projetos = [
     imagem: fotoToDolist,
     status: 'agosto 2023',
     technologies: [
-      <FaHtml5 key="html" size={25} />,
-      <FaCss3 key="css" size={25} />,
-      <IoLogoJavascript key="js" size={25} />,
+      <FaHtml5 key="HTML" size={25} />,
+      <FaCss3 key="CSS" size={25} />,
+      <IoLogoJavascript key="javaScript" size={25} />,
     ],
     nome: 'To-Do List',
     descricao: 'O projeto "To-Do List" é uma aplicação desenvolvida para auxiliar os usuários na organização de suas tarefas diárias, semanais ou mesmo de longo prazo. Essa aplicação permite aos usuários criar listas de tarefas personalizadas, adicionando itens, definindo prioridades, marcando tarefas concluídas e removendo-as conforme necessário.',
@@ -40,9 +40,9 @@ const projetos = [
   //   imagem: fotoProjeto,
   //   status: 'Em desenvolvimento',
   //   technologies: [
-  //     <IoLogoJavascript key="js" size={25} />,
-  //     <FaHtml5 key="html" size={25} />,
-  //     <FaCss3 key="css" size={25} />
+  //     <IoLogoJavascript key="javaScript" size={25} />,
+  //     <FaHtml5 key="HTML" size={25} />,
+  //     <FaCss3 key="CSS" size={25} />
   //   ],
   //   nome: 'Projeto 3',
   //   descricao: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quibusdam autem quisquam assumenda quas?',

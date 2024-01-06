@@ -84,12 +84,22 @@
   }
 }
 
+.aboutContainer {
+  padding-top: 4rem;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 10px;
+}
 .about {
   display: flex;
-  margin: 0 3rem;
-  padding: 4rem;
+  padding: 2rem;
   background-color: var(--surface-primary);
   border-radius: 10px;
+}
+.about .leftContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about .leftContent,
 .about .rightContent {
@@ -135,10 +145,14 @@
   filter: brightness(80%);
 }
 
+@media(max-width: 1024px) {
+  .about {
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   .about {
-    padding: 10px;
-    flex-direction: column;
+    padding: 2rem 10px;
     gap: 2rem;
     margin: 0 0.5rem;
   }
@@ -149,7 +163,7 @@
 
 .projectsContainer {
   margin-bottom: 5rem;
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 .titleProjects {
   text-align: center;
@@ -193,6 +207,7 @@
 }
 .timeProject svg {
   color: var(--primary-color-400);
+  margin-left: 4px;
 }
 .card h1 {
   font-size: 1.25rem;
@@ -225,6 +240,8 @@
 }
 
 .contactContainer {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
   max-width: 1400px;
   margin: 0 auto;
 }

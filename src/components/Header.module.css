@@ -53,6 +53,14 @@
   .headerContainer > svg {
     display: block;
   }
+  .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--surface-background);
+    z-index: 1000;
+  }
   .navMenu {
     position: fixed;
     top: 80px;

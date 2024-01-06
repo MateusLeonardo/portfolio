@@ -1,11 +1,12 @@
-import { FiSun } from "react-icons/fi";
 import { IoMenu, IoClose } from "react-icons/io5";
 import styles from "./Header.module.css";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation()
+
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -14,6 +15,9 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
     e.preventDefault();
     scrollToSection(ref);
   };
+
+  const isHomePage = location.pathname === "/"
+
 
   return (
     <header className={styles.header}>
@@ -30,7 +34,9 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
             <li>
               <Link to={"/"}>Home</Link>
             </li>
-            <li>
+            {isHomePage && (
+              <>
+                <li>
               <a href="#sobre" onClick={handleLinkClick(sobreRef)}>
                 Sobre
               </a>
@@ -45,6 +51,8 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
                 Contato
               </a>
             </li>
+              </>
+            )}
             {/* <li>
               <button className={styles.buttonTranslater}>En</button>
             </li>

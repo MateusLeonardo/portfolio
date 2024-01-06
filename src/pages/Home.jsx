@@ -1,9 +1,9 @@
 import { Subtitle } from "../components/Subtitle";
 import styles from "./Home.module.css";
 import projetos from "../../projetos";
-import fotoMateus from '../assets/FotoMateus.jpg'
-import fotoSobre from '../assets/bro.png'
-import fotoContato from '../assets/MobileRafiki.svg'
+import fotoMateus from "../assets/FotoMateus.jpg";
+import fotoSobre from "../assets/bro.png";
+import fotoContato from "../assets/MobileRafiki.svg";
 import {
   FaLongArrowAltRight,
   FaReact,
@@ -12,58 +12,62 @@ import {
   FaFigma,
   FaLinkedin,
   FaGithub,
-  FaCheck
+  FaCheck,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
 import { useState } from "react";
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
+import { Tooltip } from "antd";
 
-export function Home({sobreRef, projetosRef, contatoRef}) {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [sendingMessage, setSendingMessage] = useState(false)
-  const [sentMessage, setSentMessage] = useState(false)
+export function Home({ sobreRef, projetosRef, contatoRef }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sendingMessage, setSendingMessage] = useState(false);
+  const [sentMessage, setSentMessage] = useState(false);
 
   const sendEmail = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    if(name === '' || email === '' || message === '') {
-      alert('Preencha todos os campos')
-      return
+    if (name === "" || email === "" || message === "") {
+      alert("Preencha todos os campos");
+      return;
     }
 
-    try  {
-      setSendingMessage(true)
+    try {
+      setSendingMessage(true);
       const templateParams = {
         from_name: name,
         message: message,
-        email: email
-      }
-     const response = await emailjs.send("service_s0usnqp", "template_odki7as", templateParams, "MHvpjapl3Mpmr-zzN")
+        email: email,
+      };
+      const response = await emailjs.send(
+        "service_s0usnqp",
+        "template_odki7as",
+        templateParams,
+        "MHvpjapl3Mpmr-zzN"
+      );
 
-      setEmail('')
-      setMessage('')
-      setName('')
+      setEmail("");
+      setMessage("");
+      setName("");
 
-      setSendingMessage(false)
-      setSentMessage(true)
-      
+      setSendingMessage(false);
+      setSentMessage(true);
+
       setTimeout(() => {
-        setSentMessage(false)
-      }, 2000)
-    } catch (err) { 
-      console.log('Erro:', err)
-    } 
-
-  }
-
+        setSentMessage(false);
+      }, 2000);
+    } catch (err) {
+      console.log("Erro:", err);
+    }
+  };
 
   return (
     <>
-      <main>
+      <main className="main">
         <section className={styles.headline}>
           <div className={styles.leftContent}>
             <h1>Olá, meu nome é Mateus</h1>
@@ -74,11 +78,18 @@ export function Home({sobreRef, projetosRef, contatoRef}) {
             </p>
             <div className={styles.socials}>
               <Subtitle text="Minhas redes sociais" />
-              <a href="https://www.linkedin.com/in/mateus-leonardo-dev/" target="_blank">
-                <FaLinkedin />
+              <a
+                href="https://www.linkedin.com/in/mateus-leonardo-dev/"
+                target="_blank"
+              >
+                <Tooltip title="LinkedIn" placement="bottom">
+                  <FaLinkedin />
+                </Tooltip>
               </a>
               <a href="https://github.com/MateusLeonardo" target="_blank">
-                <FaGithub />
+                <Tooltip title="GitHub" placement="bottom">
+                  <FaGithub />
+                </Tooltip>
               </a>
             </div>
           </div>
@@ -87,63 +98,82 @@ export function Home({sobreRef, projetosRef, contatoRef}) {
           </div>
         </section>
 
-        <section className={styles.about} id="sobre" ref={sobreRef}>
-          <div className={styles.leftContent}>
-            <figure>
+        <section className={styles.aboutContainer} id="sobre" ref={sobreRef}>
+          <div className={styles.about}>
+            <div className={styles.leftContent}>
               <img src={fotoSobre} alt="" />
-            </figure>
-          </div>
-          <div className={styles.rightContent}>
-            <div className={styles.tecnologies}>
-              <FaReact size={35} />
-              <IoLogoJavascript size={35} />
-              <FaHtml5 size={35} />
-              <FaCss3 size={35} />
-              <FaFigma size={35} />
             </div>
-            <Subtitle text="Sobre mim" />
-            <h1>
-              Sou um desenvolvedor de software apaixonado em busca de uma
-              oportunidade para atuar na área de front-end.
-            </h1>
-            <p>
-              Além da programação, gosto de praticar musculação regularmente
-              para manter um estilo de vida saudável. Além disso, aprecio a
-              experiência de saborear uma boa xícara de café. Sou apaixonado por
-              gatos e desfruto muito da companhia e ternura desses animais.
-              Também tenho uma grande paixão por estudar e aprimorar meu
-              conhecimento e habilidades em diversas áreas.
-            </p>
-            <button>
-              Meu Currículo <FaLongArrowAltRight />
-            </button>
+            <div className={styles.rightContent}>
+              <div className={styles.tecnologies}>
+                <FaReact size={35} />
+                <IoLogoJavascript size={35} />
+                <FaHtml5 size={35} />
+                <FaCss3 size={35} />
+                <FaFigma size={35} />
+              </div>
+              <Subtitle text="Sobre mim" />
+              <h1>
+                Sou um desenvolvedor de software apaixonado em busca de uma
+                oportunidade para atuar na área de front-end.
+              </h1>
+              <p>
+                Além da programação, gosto de praticar musculação regularmente
+                para manter um estilo de vida saudável. Além disso, aprecio a
+                experiência de saborear uma boa xícara de café. Sou apaixonado
+                por gatos e desfruto muito da companhia e ternura desses
+                animais. Também tenho uma grande paixão por estudar e aprimorar
+                meu conhecimento e habilidades em diversas áreas.
+              </p>
+              <button>
+                Meu Currículo <FaLongArrowAltRight />
+              </button>
+            </div>
           </div>
         </section>
 
-        <section className={styles.projectsContainer} id="projetos" ref={projetosRef}>
+        <section
+          className={styles.projectsContainer}
+          id="projetos"
+          ref={projetosRef}
+        >
           <div className={styles.titleProjects}>
             <Subtitle text="Projetos" />
             <p>Aqui estão meus principais projetos</p>
           </div>
           <div className={styles.projetcs}>
             {projetos.map((projeto) => (
-              <div className={styles.card} key={projeto.id} >
+              <div className={styles.card} key={projeto.id}>
                 <img src={projeto.imagem} alt="" />
                 <div className={styles.timeProject}>
                   <p>{projeto.status}</p>
                   <div className={styles.tecnologies}>
-                    {projeto.technologies.map((technologies) => technologies)}
+                    {projeto.technologies.map((technology, index) => (
+                      <Tooltip
+                        key={index}
+                        title={technology.key}
+                        placement="bottom"
+                        color="#413A4F"
+                      >
+                        <span>{technology}</span>
+                      </Tooltip>
+                    ))}
                   </div>
                 </div>
                 <h1>{projeto.nome}</h1>
                 <p>{projeto.descricaoPequena}</p>
-                <Link to={`/${projeto.id}`}>Detalhes <GoArrowUpRight/></Link>
+                <Link to={`/${projeto.id}`}>
+                  Detalhes <GoArrowUpRight />
+                </Link>
               </div>
             ))}
           </div>
         </section>
 
-        <section className={styles.contactContainer} id="contato" ref={contatoRef}>
+        <section
+          className={styles.contactContainer}
+          id="contato"
+          ref={contatoRef}
+        >
           <div className={styles.contact}>
             <div className={styles.leftContent}>
               <img src={fotoContato} alt="" width={200} />
@@ -156,23 +186,36 @@ export function Home({sobreRef, projetosRef, contatoRef}) {
             </div>
             <div className={styles.rightContent}>
               <form className={styles.formContact}>
-                <input type="text" placeholder="Nome" value={name} onChange={({target}) => setName(target.value)}/>
-                <input type="email" placeholder="E-mail" value={email} onChange={({target}) => setEmail(target.value)}/>
-                <textarea rows={10} placeholder="Digite sua mensagem" value={message} onChange={({target}) => setMessage(target.value)}/>
+                <input
+                  type="text"
+                  placeholder="Nome"
+                  value={name}
+                  onChange={({ target }) => setName(target.value)}
+                />
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  value={email}
+                  onChange={({ target }) => setEmail(target.value)}
+                />
+                <textarea
+                  rows={10}
+                  placeholder="Digite sua mensagem"
+                  value={message}
+                  onChange={({ target }) => setMessage(target.value)}
+                />
                 {sentMessage ? (
                   <button type="submit" disabled onClick={sendEmail}>
-                  Mensagem enviada! <FaCheck color="green"/>
-                </button>
+                    Mensagem enviada! <FaCheck color="green" />
+                  </button>
+                ) : sendingMessage ? (
+                  <button type="submit" disabled onClick={sendEmail}>
+                    Enviando mensagem <span className="loading"></span>
+                  </button>
                 ) : (
-                  sendingMessage ? (
-                    <button type="submit" disabled onClick={sendEmail}>
-                      Enviando mensagem <span className="loading"></span>
-                    </button>
-                  ) : (
-                    <button type="submit" onClick={sendEmail}>
-                      Enviar mensagem <FaLongArrowAltRight />
-                    </button>
-                  )
+                  <button type="submit" onClick={sendEmail}>
+                    Enviar mensagem <FaLongArrowAltRight />
+                  </button>
                 )}
               </form>
             </div>

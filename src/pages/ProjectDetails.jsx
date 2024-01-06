@@ -5,11 +5,11 @@ import styles from "./ProjectDetails.module.css";
 import { TbWorld } from "react-icons/tb";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaGithub } from "react-icons/fa";
+import { Tooltip } from "antd";
 
 const ProjectDetails = () => {
   const { id } = useParams();
   const [projeto, setProjeto] = useState({});
-  console.log(projeto);
 
   useEffect(() => {
     const projetoEncontrado = projetos.find((projeto) => projeto.id === id);
@@ -19,7 +19,7 @@ const ProjectDetails = () => {
     }
   }, [id]);
   return (
-    <main className={styles.container}>
+    <main className={`main ${styles.container}`}>
       <div className={styles.containerProjectDescription}>
         <div className={styles.projectDescription}>
           <img src={projeto.imagem} alt="" />
@@ -28,7 +28,16 @@ const ProjectDetails = () => {
               <p>{projeto.status}</p>
               <div className={styles.tecnologies}>
                 {projeto.technologies &&
-                  projeto.technologies.map((technologies) => technologies)}
+                  projeto.technologies.map((technology, index) => (
+                    <Tooltip
+                      key={index}
+                      title={technology.key}
+                      placement="bottom"
+                      color="#413A4F"
+                    >
+                      <span>{technology}</span>
+                    </Tooltip>
+                  ))}
               </div>
             </div>
             <h1>{projeto.nome}</h1>
@@ -37,11 +46,19 @@ const ProjectDetails = () => {
         </div>
         <div className={styles.projectLinks}>
           <h2>Dê uma olhada neste projeto</h2>
-          <a href={projeto.liveDemo} target="_blank" className={styles.linkLiveDemo}>
+          <a
+            href={projeto.liveDemo}
+            target="_blank"
+            className={styles.linkLiveDemo}
+          >
             <TbWorld /> <span>Live demo</span>
             <GoArrowUpRight />
           </a>
-          <a href={projeto.githubCode} target="_blank" className={styles.linkCodeGithub}>
+          <a
+            href={projeto.githubCode}
+            target="_blank"
+            className={styles.linkCodeGithub}
+          >
             <FaGithub /> <span>Código</span>
             <GoArrowUpRight />
           </a>
