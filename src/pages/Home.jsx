@@ -13,7 +13,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaCheck,
-  FaGitAlt
+  FaGitAlt,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -107,7 +107,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 <FaHtml5 size={35} />
                 <FaCss3 size={35} />
                 <FaFigma size={35} />
-                <FaGitAlt  size={35}/>
+                <FaGitAlt size={35} />
               </div>
               <Subtitle text="Sobre mim" />
               <h1>
@@ -115,12 +115,13 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 para atuar na área de front-end.
               </h1>
               <p>
-                Além da minha parxão pela tecnologia, mantenho um estilo de vida
-                saudável praticando musculação regularmente, visando promover
-                minha saúde física e mental. Aprecio uma boa xícara de café é um
-                dos meus pequenos prazeres. Sou um entusiasta no mundo do
-                desenvolvimento web, e possuo conhecimento em linguaguens como{" "}
-                <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>, <b>Scss</b>, <b>Figma</b>. E buscando sempre me aperfeiçoar neste meio.
+                Além da minha paixão pela tecnologia, gosto de praticar
+                musculação visando promover uma melhora na minha saúde física e mental. Aprecio
+                uma boa xícara de café e adoro gatos. Sou um entusiasta no mundo
+                do desenvolvimento web, e possuo conhecimento em linguagens
+                como <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>,
+                <b>Scss</b>, <b>Figma</b>. E estou buscando sempre me aperfeiçoar
+                neste meio.
               </p>
               <a
                 href="https://drive.google.com/file/d/1xBqSwkhmqkifOtNVzexC6lsWliRZWQvM/view?usp=sharing"
