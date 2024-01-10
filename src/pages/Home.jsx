@@ -13,6 +13,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaCheck,
+  FaGitAlt
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -82,14 +83,10 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 href="https://www.linkedin.com/in/mateus-leonardo-dev/"
                 target="_blank"
               >
-                <Tooltip title="LinkedIn" placement="bottom" color="#413A4F">
-                  <FaLinkedin />
-                </Tooltip>
+                <FaLinkedin />
               </a>
               <a href="https://github.com/MateusLeonardo" target="_blank">
-                <Tooltip title="GitHub" placement="bottom" color="#413A4F">
-                  <FaGithub />
-                </Tooltip>
+                <FaGithub />
               </a>
             </div>
           </div>
@@ -110,23 +107,27 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 <FaHtml5 size={35} />
                 <FaCss3 size={35} />
                 <FaFigma size={35} />
+                <FaGitAlt  size={35}/>
               </div>
               <Subtitle text="Sobre mim" />
               <h1>
-                Sou um desenvolvedor de software apaixonado em busca de uma
-                oportunidade para atuar na área de front-end.
+                Sou um desenvolvedor de software em busca de uma oportunidade
+                para atuar na área de front-end.
               </h1>
               <p>
-                Além da programação, gosto de praticar musculação regularmente
-                para manter um estilo de vida saudável. Além disso, aprecio a
-                experiência de saborear uma boa xícara de café. Sou apaixonado
-                por gatos e desfruto muito da companhia e ternura desses
-                animais. Também tenho uma grande paixão por estudar e aprimorar
-                meu conhecimento e habilidades em diversas áreas.
+                Além da minha parxão pela tecnologia, mantenho um estilo de vida
+                saudável praticando musculação regularmente, visando promover
+                minha saúde física e mental. Aprecio uma boa xícara de café é um
+                dos meus pequenos prazeres. Sou um entusiasta no mundo do
+                desenvolvimento web, e possuo conhecimento em linguaguens como{" "}
+                <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>, <b>Scss</b>, <b>Figma</b>. E buscando sempre me aperfeiçoar neste meio.
               </p>
-              <button>
+              <a
+                href="https://drive.google.com/file/d/1xBqSwkhmqkifOtNVzexC6lsWliRZWQvM/view?usp=sharing"
+                target="_blank"
+              >
                 Meu Currículo <FaLongArrowAltRight />
-              </button>
+              </a>
             </div>
           </div>
         </section>

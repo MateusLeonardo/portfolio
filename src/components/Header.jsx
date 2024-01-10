@@ -1,6 +1,6 @@
 import { IoMenu, IoClose } from "react-icons/io5";
 import styles from "./Header.module.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
