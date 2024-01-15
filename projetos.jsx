@@ -1,5 +1,4 @@
-import { FaHtml5, FaCss3, FaReact } from "react-icons/fa";
-import { BsFiletypeScss } from "react-icons/bs";
+import { FaHtml5, FaCss3, FaReact, FaSass } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import fotoReceitasWeb from "./src/assets/receitasWebImg.png";
 import fotoToDolist from "./src/assets/ToDolistImg.png";
@@ -31,7 +30,7 @@ const projetos = [
     technologies: [
       <FaReact key="React" size={25} />,
       <FaHtml5 key="HTML" size={25} />,
-      <BsFiletypeScss key="SCSS" size={25} />,
+      <FaSass key="Sass" size={25} />,
     ],
     nome: "Coffee House",
     descricao:
