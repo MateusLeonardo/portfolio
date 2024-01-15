@@ -115,13 +115,10 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 para atuar na área de front-end.
               </h1>
               <p>
-                Além da minha paixão pela tecnologia, gosto de praticar
-                musculação visando promover uma melhora na minha saúde física e mental. Aprecio
-                uma boa xícara de café e adoro gatos. Sou um entusiasta no mundo
-                do desenvolvimento web, e possuo conhecimento em linguagens
-                como <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>,
-                <b>Scss</b>, <b>Figma</b>. E estou buscando sempre me aperfeiçoar
-                neste meio.
+                Me considero um entusiasta no mundo do desenvolvimento web, e possuo
+                conhecimento em linguagens como <b>HTML</b>, <b>CSS</b>,{" "}
+                <b>JavaScript</b>, <b>React</b>, <b>Scss</b>, <b>Figma</b>. E
+                estou buscando sempre me aperfeiçoar neste meio.
               </p>
               <a
                 href="https://drive.google.com/file/d/1xBqSwkhmqkifOtNVzexC6lsWliRZWQvM/view?usp=sharing"

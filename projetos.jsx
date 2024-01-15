@@ -1,8 +1,8 @@
 import { FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import fotoProjeto from './src/assets/ProjetoImagem.png'
 import fotoReceitasWeb from './src/assets/receitasWebImg.png'
 import fotoToDolist from './src/assets/ToDolistImg.png'
+import fotoImagemSearch from './src/assets/ImagemSearch.png'
 
 const projetos = [
   {
@@ -35,18 +35,21 @@ const projetos = [
     liveDemo: 'https://to-do-list-drab-zeta.vercel.app/',
     githubCode: 'https://github.com/MateusLeonardo/ToDoList'
   },
-  // {
-  //   id: 'ToDoList',
-  //   imagem: fotoProjeto,
-  //   status: 'Em desenvolvimento',
-  //   technologies: [
-  //     <IoLogoJavascript key="javaScript" size={25} />,
-  //     <FaHtml5 key="HTML" size={25} />,
-  //     <FaCss3 key="CSS" size={25} />
-  //   ],
-  //   nome: 'Projeto 3',
-  //   descricao: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quibusdam autem quisquam assumenda quas?',
-  // }
+  {
+    id: 'imagemSearch',
+    imagem: fotoImagemSearch,
+    status: 'Janeiro 2024',
+    technologies: [
+      <FaHtml5 key="HTML" size={25} />,
+      <FaCss3 key="CSS" size={25} />,
+      <IoLogoJavascript key="javaScript" size={25} />,
+    ],
+    nome: 'Imagem Search',
+    descricao: 'O projeto "Imagem Search" é uma aplicação projetada para facilitar a busca de imagens de forma intuitiva. Desenvolvida com a finalidade de proporcionar uma experiência eficiente aos usuários, a aplicação utiliza a poderosa API do Unsplash para recuperar imagens com base nas entradas fornecidas pelo usuário.',
+    descricaoPequena: 'O projeto "Imagem Search" é uma aplicação projetada para facilitar a busca de imagens de forma intuitiva...',
+    liveDemo: 'https://imagem-search.vercel.app/',
+    githubCode: 'https://github.com/MateusLeonardo/Imagem-Search'
+  },
 ];
 
 export default projetos;
