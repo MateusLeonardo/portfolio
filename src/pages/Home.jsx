@@ -121,7 +121,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 estou buscando sempre me aperfeiçoar neste meio.
               </p>
               <a
-                href="https://drive.google.com/file/d/1xBqSwkhmqkifOtNVzexC6lsWliRZWQvM/view?usp=sharing"
+                href="https://drive.google.com/file/d/1JOojVjd07GKadl624QFyYSC81rbK_bRB/view?usp=sharing"
                 target="_blank"
               >
                 Meu Currículo <FaLongArrowAltRight />
