@@ -117,11 +117,11 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
               <p>
                 Me considero um entusiasta no mundo do desenvolvimento web, e possuo
                 conhecimento em linguagens como <b>HTML</b>, <b>CSS</b>,{" "}
-                <b>JavaScript</b>, <b>React</b>, <b>Scss</b>, <b>Figma</b>. E
+                <b>JavaScript</b>, <b>React</b>, <b>Sass</b>, <b>Figma</b>, <b>Git</b>. E
                 estou buscando sempre me aperfeiçoar neste meio.
               </p>
               <a
-                href="https://drive.google.com/file/d/1JOojVjd07GKadl624QFyYSC81rbK_bRB/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ebei8JNB_dgMQrk8fGKdM65gpbMu_L7u/view?usp=sharing"
                 target="_blank"
               >
                 Meu Currículo <FaLongArrowAltRight />
