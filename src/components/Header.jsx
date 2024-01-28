@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation()
+  const location = useLocation();
 
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,15 +14,32 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
   const handleLinkClick = (ref) => (e) => {
     e.preventDefault();
     scrollToSection(ref);
+    setMenuOpen(!menuOpen);
   };
 
-  const isHomePage = location.pathname === "/"
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    if (e.target.innerHTML != "Mateus") {
+      setMenuOpen(!menuOpen);
+    }
+  };
 
+  const isHomePage = location.pathname === "/";
 
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <Link to={"/"}>Mateus</Link>
+        {isHomePage ? (
+          <a href="#" onClick={scrollToTop}>
+            Mateus
+          </a>
+        ) : (
+          <Link to={"/"}>Mateus</Link>
+        )}
 
         {menuOpen ? (
           <IoClose size={30} color="#F5F6F6" onClick={handleToggleMenu} />
@@ -32,25 +49,33 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
         <nav className={`${styles.navMenu} ${menuOpen && styles.active}`}>
           <ul className={styles.ulMenu}>
             <li>
-              <Link to={"/"}>Home</Link>
+              {isHomePage ? (
+                <a href="#" onClick={scrollToTop}>
+                  Home
+                </a>
+              ) : (
+                <Link to={"/"} onClick={handleToggleMenu}>
+                  Home
+                </Link>
+              )}
             </li>
             {isHomePage && (
               <>
                 <li>
-              <a href="#sobre" onClick={handleLinkClick(sobreRef)}>
-                Sobre
-              </a>
-            </li>
-            <li>
-              <a href="#projetos" onClick={handleLinkClick(projetosRef)}>
-                Projetos
-              </a>
-            </li>
-            <li>
-              <a href="#contato" onClick={handleLinkClick(contatoRef)}>
-                Contato
-              </a>
-            </li>
+                  <a href="#sobre" onClick={handleLinkClick(sobreRef)}>
+                    Sobre
+                  </a>
+                </li>
+                <li>
+                  <a href="#projetos" onClick={handleLinkClick(projetosRef)}>
+                    Projetos
+                  </a>
+                </li>
+                <li>
+                  <a href="#contato" onClick={handleLinkClick(contatoRef)}>
+                    Contato
+                  </a>
+                </li>
               </>
             )}
             {/* <li>
