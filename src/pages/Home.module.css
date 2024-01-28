@@ -6,7 +6,7 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 .headline .leftContent,
 .headline .rightContent {
@@ -85,16 +85,16 @@
 }
 
 .aboutContainer {
-  padding-top: 4rem;
+  padding-top: 5rem;
   margin: 0 auto;
   max-width: 1400px;
-  padding: 10px;
 }
 .about {
   display: flex;
   padding: 2rem;
   background-color: var(--surface-primary);
   border-radius: 10px;
+  margin: 10px;
 }
 .about .leftContent {
   display: flex;
@@ -150,12 +150,14 @@
   .about {
     flex-direction: column;
   }
+  .about .leftContent img {
+    width: 500px;
+  }
 }
 @media (max-width: 768px) {
   .about {
     padding: 2rem 10px;
     gap: 2rem;
-    margin: 0 0.5rem;
   }
   .about .rightContent {
     padding: 0;
@@ -241,6 +243,12 @@
   filter: brightness(80%);
 }
 
+@media(max-width: 375px) {
+  .projetcs .card {
+    padding: 10px;
+  }
+}
+
 .contactContainer {
   padding-bottom: 5rem;
   padding-top: 5rem;
@@ -253,6 +261,7 @@
   display: flex;
   align-items: center;
   background-color: var(--surface-primary);
+  border-radius: 10px;
 }
 .contact .leftContent,
 .contact .rightContent {

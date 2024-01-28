@@ -14,7 +14,7 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
   const handleLinkClick = (ref) => (e) => {
     e.preventDefault();
     scrollToSection(ref);
-    setMenuOpen(!menuOpen);
+    handleToggleMenu()
   };
 
   const scrollToTop = (e) => {
@@ -23,8 +23,9 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
       top: 0,
       behavior: "smooth",
     });
-    if (e.target.innerHTML != "Mateus") {
-      setMenuOpen(!menuOpen);
+    const clickedName = e.target.innerHTML;
+    if (clickedName !== "Mateus") {
+      handleToggleMenu()
     }
   };
 
