@@ -82,10 +82,11 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
               <a
                 href="https://www.linkedin.com/in/mateus-leonardo-dev/"
                 target="_blank"
+                aria-label="Link para LinkedIn"
               >
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/MateusLeonardo" target="_blank">
+              <a href="https://github.com/MateusLeonardo" target="_blank" aria-label="Link para Github" >
                 <FaGithub />
               </a>
             </div>

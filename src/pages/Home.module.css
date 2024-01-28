@@ -17,7 +17,7 @@
   font-family: "Kalam", cursive;
   background: var(
     --brand-gradient-horizontal,
-    linear-gradient(90deg, #00ADB5 0%, #7bffaf 100%)
+    linear-gradient(90deg, #00adb5 0%, #7bffaf 100%)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -75,7 +75,7 @@
   }
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .headline .leftContent h1 {
     font-size: 2.4rem;
   }
@@ -146,7 +146,7 @@
   filter: brightness(80%);
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .about {
     flex-direction: column;
   }
@@ -166,7 +166,7 @@
 
 .projectsContainer {
   margin-bottom: 5rem;
-  padding-top: 5rem;
+  margin-top: 5rem;
 }
 .titleProjects {
   text-align: center;
@@ -243,7 +243,13 @@
   filter: brightness(80%);
 }
 
-@media(max-width: 375px) {
+@media (max-width: 768px) {
+  .projectsContainer {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 375px) {
   .projetcs .card {
     padding: 10px;
   }
