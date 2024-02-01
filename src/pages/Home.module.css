@@ -332,6 +332,9 @@
 .formContact button:hover {
   filter: brightness(75%);
 }
+.incorrect {
+  color: var(--secondary-color);
+}
 
 @media (max-width: 768px) {
   .contact {
