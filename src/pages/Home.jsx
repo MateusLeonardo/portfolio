@@ -28,12 +28,28 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
   const [message, setMessage] = useState("");
   const [sendingMessage, setSendingMessage] = useState(false);
   const [sentMessage, setSentMessage] = useState(false);
+  const [emailRegex, setEmailRegex] = useState(false);
+  const [formCompleteResponse, setFormCompleteResponse] = useState(false);
 
   const sendEmail = async (event) => {
     event.preventDefault();
 
     if (name === "" || email === "" || message === "") {
-      alert("Preencha todos os campos");
+      setFormCompleteResponse(true);
+      setTimeout(() => {
+        setFormCompleteResponse(false);
+      }, 2000);
+      return;
+    }
+
+    const emailRegex =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if (!emailRegex.test(email)) {
+      setEmailRegex(true);
+      setTimeout(() => {
+        setEmailRegex(false);
+      }, 2000);
       return;
     }
 
@@ -86,7 +102,11 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
               >
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/MateusLeonardo" target="_blank" aria-label="Link para Github" >
+              <a
+                href="https://github.com/MateusLeonardo"
+                target="_blank"
+                aria-label="Link para Github"
+              >
                 <FaGithub />
               </a>
             </div>
@@ -116,10 +136,10 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 para atuar na área de front-end.
               </h1>
               <p>
-                Me considero um entusiasta no mundo do desenvolvimento web, e possuo
-                conhecimento em linguagens como <b>HTML</b>, <b>CSS</b>,{" "}
-                <b>JavaScript</b>, <b>React</b>, <b>Sass</b>, <b>Figma</b>, <b>Git</b>. E
-                estou buscando sempre me aperfeiçoar neste meio.
+                Me considero um entusiasta no mundo do desenvolvimento web, e
+                possuo conhecimento em linguagens como <b>HTML</b>, <b>CSS</b>,{" "}
+                <b>JavaScript</b>, <b>React</b>, <b>Sass</b>, <b>Figma</b>,{" "}
+                <b>Git</b>. E estou buscando sempre me aperfeiçoar neste meio.
               </p>
               <a
                 href="https://drive.google.com/file/d/1_jmB6SlEdg-j9vPVafTeLeE7dh_dRY4h/view?usp=sharing"
@@ -191,19 +211,32 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                   placeholder="Nome"
                   value={name}
                   onChange={({ target }) => setName(target.value)}
+                  required
                 />
                 <input
                   type="email"
                   placeholder="E-mail"
                   value={email}
                   onChange={({ target }) => setEmail(target.value)}
+                  required
                 />
+                {emailRegex && (
+                  <span className={styles.incorrect}>
+                    Digite um email valido!
+                  </span>
+                )}
                 <textarea
                   rows={10}
                   placeholder="Digite sua mensagem"
                   value={message}
                   onChange={({ target }) => setMessage(target.value)}
+                  required
                 />
+                {formCompleteResponse && (
+                  <span className={styles.incorrect}>
+                    Preencha todos os campos!
+                  </span>
+                )}
                 {sentMessage ? (
                   <button type="submit" disabled onClick={sendEmail}>
                     Mensagem enviada! <FaCheck color="green" />
