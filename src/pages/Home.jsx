@@ -1,8 +1,8 @@
 import { Subtitle } from "../components/Subtitle";
 import styles from "./Home.module.css";
 import projetos from "../../projetos";
-import fotoMateus from "../assets/FotoMateus.jpg";
-import fotoSobre from "../assets/bro.png";
+import fotoMateus from "../assets/FotoMateus.webp";
+import fotoSobre from "../assets/bro.webp";
 import fotoContato from "../assets/MobileRafiki.svg";
 import {
   FaLongArrowAltRight,

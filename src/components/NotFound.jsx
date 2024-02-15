@@ -1,4 +1,4 @@
-import fotoNaoEncontrada from "../assets/Error404Img.png";
+import fotoNaoEncontrada from "../assets/Error404Img.webp";
 import styles from "./NotFound.module.css";
 
 export function NotFound() {

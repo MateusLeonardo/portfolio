@@ -1,9 +1,9 @@
 import { FaHtml5, FaCss3, FaReact, FaSass } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import fotoReceitasWeb from "./src/assets/receitasWebImg.png";
-import fotoToDolist from "./src/assets/ToDolistImg.png";
-import fotoImagemSearch from "./src/assets/ImagemSearch.png";
-import fotoCoffeeHouse from "./src/assets/CoffeeHouse.png";
+import fotoReceitasWeb from "./src/assets/receitasWebImg.webp";
+import fotoToDolist from "./src/assets/ToDolistImg.webp";
+import fotoImagemSearch from "./src/assets/ImagemSearch.webp";
+import fotoCoffeeHouse from "./src/assets/CoffeeHouse.webp";
 
 const projetos = [
   {
