@@ -1,0 +1,89 @@
+.projectsContainer {
+  margin-bottom: 2rem;
+}
+.titleProjects {
+  text-align: center;
+  padding: 20px;
+}
+.titleProjects p {
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.projetcs {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.projetcs .card {
+  max-width: 350px;
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--surface-primary);
+  border-radius: 10px;
+}
+.projetcs .card img {
+  border-radius: 10px 10px 0 0;
+}
+.timeProject {
+  padding-top: 5px;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.timeProject p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.timeProject svg {
+  color: var(--primary-color-400);
+  margin-left: 4px;
+}
+.card h1 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  padding-bottom: 0.5rem;
+}
+.card > p {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.card a {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  color: var(--text-primary);
+  background-color: var(--surface-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+.card a svg {
+  font-size: 1.2rem;
+}
+.card a:hover {
+  filter: brightness(80%);
+}
+
+@media (max-width: 768px) {
+  .projectsContainer {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 375px) {
+  .projetcs .card {
+    padding: 10px;
+  }
+}

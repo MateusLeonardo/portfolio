@@ -165,7 +165,7 @@
 }
 
 .projectsContainer {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   margin-top: 5rem;
 }
 .titleProjects {
@@ -241,6 +241,22 @@
 }
 .card a:hover {
   filter: brightness(80%);
+}
+.linkTodosProjetos {
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.linkTodosProjetos a {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  font-size: 1.125rem;
+}
+.linkTodosProjetos a:hover   {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

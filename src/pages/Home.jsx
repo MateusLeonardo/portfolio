@@ -161,7 +161,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
             <p>Aqui estão meus principais projetos</p>
           </div>
           <div className={styles.projetcs}>
-            {projetos.map((projeto) => (
+            {projetos.slice(0, 3).map((projeto) => (
               <div className={styles.card} key={projeto.id}>
                 <img src={projeto.imagem} alt="" />
                 <div className={styles.timeProject}>
@@ -186,6 +186,11 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 </Link>
               </div>
             ))}
+          </div>
+          <div className={styles.linkTodosProjetos}>
+            <Link to={"/projeto"}>
+              Ver todos <GoArrowUpRight />
+            </Link>
           </div>
         </section>
 

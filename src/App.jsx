@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { useRef } from "react";
 import { NotFound } from "./components/NotFound";
+import Projects from "./pages/Projects";
 
 const App = () => {
   const sobreRef = useRef(null);
@@ -19,10 +20,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header
-       scrollToSection={scrollToSection}
-       sobreRef={sobreRef}
-       projetosRef={projetosRef}
-       contatoRef={contatoRef}
+        scrollToSection={scrollToSection}
+        sobreRef={sobreRef}
+        projetosRef={projetosRef}
+        contatoRef={contatoRef}
       />
       <Routes>
         <Route
@@ -35,8 +36,9 @@ const App = () => {
             />
           }
         />
+        <Route path="/projeto" element={<Projects />} />
         <Route path="/projeto/:id" element={<ProjectDetails />} />
-        <Route path="*" element={<NotFound/> } />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
