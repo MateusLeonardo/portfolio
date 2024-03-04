@@ -7,6 +7,9 @@ import { Subtitle } from '../components/Subtitle'
 import { Tooltip } from 'antd'
 
 const Projects = () => {
+  React.useEffect(() => {
+    scrollToTop()
+  },[])
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -17,7 +20,6 @@ const Projects = () => {
   return (
     <section
     className={styles.projectsContainer}
-    onLoad={()=> scrollToTop()}
   >
     <div className={styles.titleProjects}>
       <Subtitle text="Projetos" />
