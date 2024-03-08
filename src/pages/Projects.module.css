@@ -11,6 +11,23 @@
   font-weight: 500;
   margin-bottom: 3rem;
 }
+.linkVoltar {
+  max-width: 1200px;
+  margin: 1.5rem auto 0 auto;
+  padding: 10px;
+}
+.linkVoltar a {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+  padding: 10px;
+}
+.linkVoltar a:hover {
+  text-decoration: underline;
+}
 .projetcs {
   max-width: 1400px;
   margin: 0 auto;
@@ -80,6 +97,9 @@
   .projectsContainer {
     margin-top: 0;
     padding-top: 5rem;
+  }
+  .linkVoltar {
+    margin-top: 1rem;
   }
 }
 @media (max-width: 375px) {

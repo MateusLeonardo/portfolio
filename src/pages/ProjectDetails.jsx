@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import projetos from "../../projetos";
 import styles from "./ProjectDetails.module.css";
 import { TbWorld } from "react-icons/tb";
 import { GoArrowUpRight } from "react-icons/go";
-import { FaGithub } from "react-icons/fa";
+import { FaArrowLeft, FaGithub } from "react-icons/fa";
 import { Tooltip } from "antd";
 
 const ProjectDetails = () => {
@@ -20,6 +20,12 @@ const ProjectDetails = () => {
   }, [id]);
   return (
     <main className={`main ${styles.container}`}>
+      <div className={styles.linkVoltar}>
+        <Link to="/projeto">
+          {" "}
+          <FaArrowLeft /> Voltar
+        </Link>
+      </div>
       <div className={styles.containerProjectDescription}>
         <div className={styles.projectDescription}>
           <img src={projeto.imagem} alt="" />
