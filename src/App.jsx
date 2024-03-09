@@ -12,18 +12,22 @@ const App = () => {
   const sobreRef = useRef(null);
   const projetosRef = useRef(null);
   const contatoRef = useRef(null);
+  const [dark, setDark] = React.useState(true)
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
+    <div className={`containerTema ${dark ? 'dark' : 'light'}`}>
     <BrowserRouter>
       <Header
         scrollToSection={scrollToSection}
         sobreRef={sobreRef}
         projetosRef={projetosRef}
         contatoRef={contatoRef}
+        setDark={setDark}
+        dark={dark}
       />
       <Routes>
         <Route
@@ -42,6 +46,7 @@ const App = () => {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </div>
   );
 };
 

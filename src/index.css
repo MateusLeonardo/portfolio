@@ -1,15 +1,29 @@
-:root {
-  --primary-color-500: #0C5A6E;
-  --primary-color-400: #00B2A9;
+.dark {
+  --primary-color-500: #0c5a6e;
+  --primary-color-400: #00b2a9;
   --secondary-color: #ff4a3d;
-  
-  --surface-background: #1F2833;
-  --surface-primary: #39424E;
+
+  --surface-background: #1f2833;
+  --surface-primary: #39424e;
   --surface-secondary: #53687c;
-  --surface-tertiary: #5A6978;
-  
-  --text-primary: #FFFFFF;
-  --text-secondary: #D8E3E7;
+  --surface-tertiary: #5a6978;
+
+  --text-primary: #ffffff;
+  --text-secondary: #d8e3e7;
+}
+
+.light {
+  --primary-color-500: #0c5a6e;
+  --primary-color-400: #00b2a9;
+  --secondary-color: #0016df;
+
+  --surface-background: #ffffff;
+  --surface-primary: #f0f2f5;
+  --surface-secondary: #e4e7eb;
+  --surface-tertiary: #d8e3e7;
+
+  --text-primary: #333333;
+  --text-secondary: #53687c;
 }
 
 /* font-family: 'Heebo', sans-serif;
@@ -19,10 +33,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--surface-background);
-  font-family: 'Heebo', sans-serif
+  font-family: "Heebo", sans-serif;
 }
-
+.containerTema {
+  background-color: var(--surface-background);
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -34,13 +49,17 @@ ul {
 img {
   max-width: 100%;
 }
-h1, h2, h3, p {
-  margin: 0 ;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
   padding: 0;
 }
 
 @keyframes subirDescer {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -58,18 +77,20 @@ h1, h2, h3, p {
   border-radius: 50%; /* Forma do círculo */
   width: 8px; /* Tamanho do círculo */
   height: 8px; /* Tamanho do círculo */
-  animation: spin 1s linear infinite; /* Animação de rotação */ 
+  animation: spin 1s linear infinite; /* Animação de rotação */
 }
 
 /* Animação de rotação */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .main {
     padding-top: 80px;
   }

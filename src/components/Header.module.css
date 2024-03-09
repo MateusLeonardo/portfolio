@@ -47,6 +47,12 @@
   font-size: 1.3rem;
   padding: 10px 15px;
 }
+.buttonTheme {
+  background-color: transparent;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
 
 
 @media(max-width:768px) {

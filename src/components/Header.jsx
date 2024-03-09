@@ -1,9 +1,17 @@
-import { IoMenu, IoClose } from "react-icons/io5";
-import styles from "./Header.module.css";
 import { useState } from "react";
+import { IoMenu, IoClose, IoSunnyOutline } from "react-icons/io5";
+import { MdDarkMode } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
+import styles from "./Header.module.css";
 
-export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
+export function Header({
+  scrollToSection,
+  sobreRef,
+  projetosRef,
+  contatoRef,
+  dark,
+  setDark,
+}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -14,7 +22,7 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
   const handleLinkClick = (ref) => (e) => {
     e.preventDefault();
     scrollToSection(ref);
-    handleToggleMenu()
+    handleToggleMenu();
   };
 
   const scrollToTop = (e) => {
@@ -25,7 +33,7 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
     });
     const clickedName = e.target.innerHTML;
     if (clickedName !== "Mateus") {
-      handleToggleMenu()
+      handleToggleMenu();
     }
   };
 
@@ -43,9 +51,17 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
         )}
 
         {menuOpen ? (
-          <IoClose size={30} color="#F5F6F6" onClick={handleToggleMenu} />
+          <IoClose
+            size={30}
+            color={dark ? "#FFFFFF" : "#333333"}
+            onClick={handleToggleMenu}
+          />
         ) : (
-          <IoMenu size={30} color="#F5F6F6" onClick={handleToggleMenu} />
+          <IoMenu
+            size={30}
+            color={dark ? "#FFFFFF" : "#333333"}
+            onClick={handleToggleMenu}
+          />
         )}
         <nav className={`${styles.navMenu} ${menuOpen && styles.active}`}>
           <ul className={styles.ulMenu}>
@@ -81,10 +97,24 @@ export function Header({ scrollToSection, sobreRef, projetosRef, contatoRef }) {
             )}
             {/* <li>
               <button className={styles.buttonTranslater}>En</button>
-            </li>
-            <li>
-              <FiSun size={20} />
             </li> */}
+            <li>
+              {dark ? (
+                <button
+                  onClick={() => setDark(!dark)}
+                  className={styles.buttonTheme}
+                >
+                  <IoSunnyOutline size={30} color="#fff" />
+                </button>
+              ) : (
+                <button
+                  onClick={() => setDark(!dark)}
+                  className={styles.buttonTheme}
+                >
+                  <MdDarkMode size={30} />
+                </button>
+              )}
+            </li>
           </ul>
         </nav>
       </div>

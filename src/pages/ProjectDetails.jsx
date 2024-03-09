@@ -23,7 +23,7 @@ const ProjectDetails = () => {
       <div className={styles.linkVoltar}>
         <Link to="/projeto">
           {" "}
-          <FaArrowLeft /> Voltar
+          <FaArrowLeft /> Ver todos 
         </Link>
       </div>
       <div className={styles.containerProjectDescription}>

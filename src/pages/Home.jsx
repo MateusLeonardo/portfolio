@@ -204,10 +204,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
               <img src={fotoContato} alt="" width={200} />
               <Subtitle text="Contato" />
               <h2>Gostou do meu trabalho? Vamos trabalhar juntos.</h2>
-              <p>
-                Me envie um{" "}
-                <a href="mailto:mateus_leonardo1997@hotmail.com">email</a>.
-              </p>
+              <p>Me envie um email.</p>
             </div>
             <div className={styles.rightContent}>
               <form className={styles.formContact}>
