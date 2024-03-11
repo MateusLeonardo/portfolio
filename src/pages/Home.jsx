@@ -18,7 +18,7 @@ import {
 import { IoLogoJavascript } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { GoArrowUpRight } from "react-icons/go";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Tooltip } from "antd";
 
@@ -30,13 +30,16 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
   const [sentMessage, setSentMessage] = useState(false);
   const [emailRegex, setEmailRegex] = useState(false);
   const [formCompleteResponse, setFormCompleteResponse] = useState(false);
+  const refFormCompleteResponse = useRef();
+  const refEmailValidResponse = useRef();
 
   const sendEmail = async (event) => {
     event.preventDefault();
 
     if (name === "" || email === "" || message === "") {
       setFormCompleteResponse(true);
-      setTimeout(() => {
+      clearTimeout(refFormCompleteResponse.current);
+      refFormCompleteResponse.current = setTimeout(() => {
         setFormCompleteResponse(false);
       }, 2000);
       return;
@@ -47,7 +50,8 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
 
     if (!emailRegex.test(email)) {
       setEmailRegex(true);
-      setTimeout(() => {
+      clearTimeout(refEmailValidResponse.current);
+      refEmailValidResponse.current = setTimeout(() => {
         setEmailRegex(false);
       }, 2000);
       return;
