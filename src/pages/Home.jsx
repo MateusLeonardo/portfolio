@@ -92,7 +92,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
         <section className={styles.headline}>
           <div className={styles.leftContent}>
             <h1>Olá, meu nome é Mateus</h1>
-            <h2>Desenvolvedor de Sotfware</h2>
+            <h2>Desenvolvedor de Software</h2>
             <p>
               Sou entusiasta na criação de soluções web usando tecnologias como
               React, Javascript, HTML, CSS.
