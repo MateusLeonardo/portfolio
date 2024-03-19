@@ -95,7 +95,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
             <h2>Desenvolvedor de Software</h2>
             <p>
               Sou entusiasta na criação de soluções web usando tecnologias como
-              React, Javascript, HTML, CSS.
+              React, Javascript, HTML, CSS...
             </p>
             <div className={styles.socials}>
               <Subtitle text="Minhas redes sociais" />
