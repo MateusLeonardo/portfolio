@@ -146,7 +146,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 <b>Git</b>. E estou buscando sempre me aperfeiçoar neste meio.
               </p>
               <a
-                href="https://drive.google.com/file/d/1_jmB6SlEdg-j9vPVafTeLeE7dh_dRY4h/view?usp=sharing"
+                href="https://drive.google.com/file/d/1BTIwlAvQOyf2Pl0YJITWDA1_bakw7lfN/view?usp=sharing"
                 target="_blank"
               >
                 Meu Currículo <FaLongArrowAltRight />
