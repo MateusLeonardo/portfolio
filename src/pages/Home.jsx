@@ -1,7 +1,7 @@
 import { Subtitle } from "../components/Subtitle";
 import styles from "./Home.module.css";
 import projetos from "../../projetos";
-import fotoMateus from "../assets/FotoMateus.webp";
+import fotoPerfil from "../assets/fotoPerfil2.jpeg";
 import fotoSobre from "../assets/bro.webp";
 import fotoContato from "../assets/MobileRafiki.svg";
 import {
@@ -116,7 +116,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
             </div>
           </div>
           <div className={styles.rightContent}>
-            <img src={fotoMateus} alt="" />
+            <img src={fotoPerfil} alt="" />
           </div>
         </section>
 
@@ -136,8 +136,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
               </div>
               <Subtitle text="Sobre mim" />
               <h1>
-                Sou um desenvolvedor de software em busca de uma oportunidade
-                para atuar na área de front-end.
+                Sou um desenvolvedor de software apaixonado por tecnologia
               </h1>
               <p>
                 Me considero um entusiasta no mundo do desenvolvimento web, e
@@ -146,7 +145,7 @@ export function Home({ sobreRef, projetosRef, contatoRef }) {
                 <b>Git</b>. E estou buscando sempre me aperfeiçoar neste meio.
               </p>
               <a
-                href="https://drive.google.com/file/d/1BTIwlAvQOyf2Pl0YJITWDA1_bakw7lfN/view?usp=sharing"
+                href="https://drive.google.com/file/d/1_hKVTjsZMUnXAYwhwedCFtSmff5YJdFg/view?usp=sharing"
                 target="_blank"
               >
                 Meu Currículo <FaLongArrowAltRight />
